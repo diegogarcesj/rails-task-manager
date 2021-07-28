@@ -7,7 +7,10 @@
     <% else %>
       <i class="far fa-square"></i>
     <% end %>
-    <%= link_to task.title, task_path(task) %>
+    <%= link_to task.title, task_path(task) %> -
+    <%= link_to task_path(task), method: :delete, data: { confirm: "Are you sure?" } do %>
+      <%= fa_icon "trash-alt" %>
+    <% end %>
   </li>
 <% end %>
 </ul>

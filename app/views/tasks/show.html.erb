@@ -1,0 +1,13 @@
+<div class="container">
+<h1><%= @task.title %></h1>
+<div class="alert alert-secondary" role="alert">
+  <%= @task.details %>
+</div>
+<% if @task.completed %>
+  <i class="far fa-check-square"></i> This task is completed
+<% else %>
+  <i class="far fa-square"></i> This task in not completed yet
+<% end %>
+<hr>
+<%= link_to 'Back to list', tasks_path %>
+</div>

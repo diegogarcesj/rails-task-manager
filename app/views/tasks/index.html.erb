@@ -1,4 +1,3 @@
-<div class="container">
 <h1>My tasks</h1>
 <ul class="list-unstyled">
 <% @tasks.each do |task| %>
@@ -12,4 +11,6 @@
   </li>
 <% end %>
 </ul>
-</div>
+<hr>
+
+<i class="fas fa-plus"></i> <%= link_to "Add a new task", new_task_path %>
